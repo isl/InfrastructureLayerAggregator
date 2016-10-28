@@ -36,7 +36,8 @@ public class InfrastructureAggregator {
 
         InfrastructureAggregator http = new InfrastructureAggregator();
         KairosDbClient client = new KairosDbClient("http://localhost:8088/");
-        KairosDbClient centralKairosDbClient = new KairosDbClient("http://147.52.82.63:8088/");
+//        KairosDbClient centralKairosDbClient = new KairosDbClient("http://147.52.82.63:8088/");
+        KairosDbClient centralKairosDbClient = new KairosDbClient("http://" +args[0]+ ":8088/");
 
 
         client = client.initializeFullBuilder(client);
